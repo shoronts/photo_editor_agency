@@ -1,0 +1,327 @@
+@import url("../bootstrap/bootstrap.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+:root {
+    --text-color: #2B1B9A;
+    --text-color-1: #67B6F4;
+}
+
+/* Step Name Part */
+
+#left-part {
+    background-color: #F8F6FA;
+    height: 100vh;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+#left-part h2,
+#left-part p {
+    color: var(--text-color);
+}
+
+#left-part .steps {
+    z-index: 2;
+}
+
+#left-part .steps::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    bottom: 50px;
+    left: 37px;
+    border-left: 1px solid #2B1B9A;
+    opacity: .1;
+}
+
+#left-part .steps .step {
+    margin: 7px 0px;
+    padding: 1rem 2.25rem 1rem 1.4rem;
+    cursor: pointer;
+    border-radius: 200px;
+    z-index: 2;
+}
+
+#left-part .steps .step.active,
+#left-part .steps .step.start {
+    background-color: #fff;
+    box-shadow: 0px 12px 30px rgba(43, 27, 154, 0.08);
+}
+
+#left-part .steps .step .symbol-box {
+    width: 50px;
+}
+
+#left-part .steps .step .symbol {
+    height: 30px;
+    width: 30px;
+    background-color: #67B6F4;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#left-part .steps .step.active .symbol,
+#left-part .steps .step.done .symbol {
+    background-color: #76DE9F;
+}
+
+#left-part .steps .step.active .symbol span,
+#left-part .steps .step.done .symbol span {
+    display: none;
+}
+
+#left-part .steps .step .symbol span {
+    color: #fff;
+    font-size: 16px;
+}
+
+#left-part .steps .step .symbol i {
+    display: none;
+    font-size: 25px;
+    color: #fff;
+}
+
+#left-part .steps .step.active .symbol i,
+#left-part .steps .step.done .symbol i {
+    display: block;
+}
+
+#left-part .steps .step .descriptions p.title {
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#left-part .steps .step .descriptions p.description {
+    color: rgba(43, 27, 154, 0.4);
+    font-size: 14px;
+}
+
+/* Step Information Part */
+
+#right-part {
+    background-color: #FFFFFF;
+    height: 100vh;
+    overflow: scroll;
+    padding: 3.5rem 3.5rem 200px;
+}
+
+/* Common Step CSS */
+
+#right-part .step-box .short-title {
+    color: var(--text-color-1);
+    font-size: 13px;
+}
+#right-part .step-box h3.title {
+    font-size: 2rem;
+}
+
+#right-part .step-box h5.title{
+    font-size: 1.5rem;
+}
+
+#right-part .step-box h3.title,
+#right-part .step-box h5.title {
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+#right-part .step-box .description {
+    color: var(--text-color);
+}
+/* First Step Part */
+
+#right-part .first-step-box #first-step-info .accordion-item {
+    border: none;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-header .accordion-button{
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-header .accordion-button.collapsed{
+    background-color: #F8F6FA;
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+    box-shadow: none;
+    border-bottom: 1px solid;
+    border-radius: 8px 8px 0 0;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-header .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+    border-bottom: 1px solid;
+    border-radius: 8px 8px 0 0;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-header .accordion-button:focus.collapsed {
+    border-bottom: none;
+    border-radius: 8px;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-body {
+    background-color: #CFE2FF;
+    border-radius: 0 0 8px 8px;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-body .accrodion-info-box .single-accrodion {
+    background-color: #fff;
+    width: 100%;
+}
+
+#right-part .first-step-box #first-step-info .accordion-item .accordion-body .accrodion-info-box .single-accrodion .images-box .single-image {
+    height: 80px;
+    width: 80px;
+}
+
+/* Navigation Part */
+
+#right-part .navigate-box {
+    background-color: var(--text-color);
+    width: 66.85%;
+    margin-left: auto;
+}
+
+#right-part .navigate-box .total-amount .amount {
+    font-size: 42px;
+}
+
+#right-part .navigate-box .main-buttons .back-btn button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    border: none;
+}
+
+#right-part .navigate-box .main-buttons .back-btn button:active {
+    border: none;
+}
+
+#right-part .navigate-box .main-buttons .next-btn button {
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(43, 27, 154, 0.08);
+    border: none;
+    background-color: var(--text-color-1);
+    padding: 10px 50px;
+    transition: 0.5s;
+}
+
+#right-part .navigate-box .main-buttons .next-btn button:hover {
+    background-color: #9D91F5;
+}
+
+/* Thank you page */
+
+#thank-you {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#thank-you .done-icon i {
+    font-size: 50px;
+    color: #76DE9F;
+}
+
+#thank-you h2 {
+    color: var(--text-color);
+}
+
+#thank-you a.btn.another-btn {
+    background-color: #67B6F4;
+}
+
+#thank-you a.btn.another-btn:hover {
+    background-color: #9D91F6;
+}
+
+#thank-you a.btn.home-btn {
+    background-color: #fff;
+    color: var(--text-color);
+    box-shadow: 0px 12px 30px rgba(43,27,154,0.08);
+}
+
+#thank-you a.btn.home-btn:hover {
+    background-color: #F5F4FD;
+}
+
+/* Mobile CSS */
+
+@media all and (max-width: 1600px) {
+
+    #right-part .navigate-box {
+        width: 67.2%;
+    }
+}
+
+@media all and (max-width: 1300px) {
+
+    /* Navigation Box */
+
+    #right-part .navigate-box {
+        width: 67.35%;
+    }
+
+    #right-part .navigate-box .main-buttons .next-btn button {
+        padding: 10px 30px;
+    }
+}
+
+@media all and (max-width: 991px) {
+    #left-part,
+    #right-part {
+        height: 100%;
+    }
+
+    #right-part .navigate-box {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 575px) {
+    /* Second Step Info */
+
+    #right-part .second-step-box .add-on-services .width-height-box {
+        flex-direction: column;
+    }
+
+    #right-part .second-step-box .add-on-services .width-height-box .get-width-height-box {
+        flex-direction: column;
+        align-items: flex-start!important;
+    }
+
+    #right-part .second-step-box .add-on-services .width-height-box .form-floating {
+        margin-left: 0!important;
+        width: 100%!important;
+    }
+    #right-part .second-step-box .add-on-services .width-height-box .form-floating input {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 420px) {
+
+    #right-part {
+        padding-bottom: 300px;
+    }
+    
+    /* Navigation Box */
+    #right-part .navigate-box .main-buttons,
+    #right-part .navigate-box .total-amount {
+        flex-direction: column;
+    }
+
+    #right-part .navigate-box .main-buttons .next-btn button,
+    #right-part .navigate-box .main-buttons .back-btn button {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
